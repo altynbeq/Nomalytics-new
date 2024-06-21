@@ -9,8 +9,8 @@ const Sklad = () => {
   const { currentColor, currentMode } = useStateContext();
 
   return (
-    <div className='mt-12 flex flex-col justify-center align-center p-10 '>
-        <div className="flex flex-wrap gap-10 justify-center align-top m-5 xs:mr-6 xs:ml-6 lg:flex-col 2xl:flex-row items-center">
+    <div className='mt-12 flex flex-col  justify-center align-center p-10 '>
+        <div className="flex flex-row gap-10 justify-center align-top m-5 xs:mr-6 xs:ml-6 lg:flex-col 2xl:flex-row items-center">
             <SkladStatistivs />
             <SkladStats />
         </div>
