@@ -7,6 +7,9 @@ module.exports = {
       body: ['Comfortaa', 'sans-serif'],
     },
     extend: {
+      screens: {
+        'xs': {'max': '390px'}, 
+      },
       fontSize: {
         14: '14px',
       },
