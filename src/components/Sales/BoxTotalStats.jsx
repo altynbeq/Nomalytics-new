@@ -4,13 +4,11 @@ import { totalSalesBoxData } from '../../data/salesData';
 const BoxTotalStats = () => {
   return (
     <div className="grid xl:justify-center xl:w-full xl:p-8 xl:m-8 xl:pl-0  md:p-50">
-      <div className="grid grid-cols-2 gap-10  sm:grid-cols-2 p-5  md:grid-cols-2 lg:grid-cols-4 sm:p-5     ">
+      <div className="grid grid-cols-2 gap-10  sm:grid-cols-2 p-5  md:grid-cols-2 lg:grid-cols-4     ">
           {totalSalesBoxData.map((item) => (
-              <div key={item.title} className="   bg-white  h-full md:w-[90%] lg:w-[90%]  dark:text-gray-200 dark:bg-secondary-dark-bg  p-7 pt-9 rounded-2xl flex-shrink-0
+              <div key={item.title} className="   bg-white  h-full md:w-[90%] lg:w-[90%]  dark:text-gray-200 dark:bg-secondary-dark-bg  p-4 pt-9 rounded-2xl flex-shrink-0
               xl:w-full xl:pt-6  xl:pb-7 xl:pr-20 xl:pl-20 2xl:m-15  sm:w-[105%]  xs:p-7
               ">
-                
-                <div className='flex flex-row'>
                   <button
                   type="button"
                   style={{ color: item.iconColor, backgroundColor: item.iconBg }}
@@ -18,22 +16,17 @@ const BoxTotalStats = () => {
                   >
                       {item.icon}
                   </button>
-
-                    <p className="mt-3 flex flex-col ml-4">
-                      <span className="md:text-lg font-semibold">{item.amount}</span>
-                      <span className={`text-sm text-${item.pcColor} ml-2`}>
-                          {item.percentage}
-                      </span>
-                    </p>
-
-                 </div> 
-
-                    <p className="text-sm mt-3 text-gray-400 ">{item.title}</p>
-                  
+                  <p className="mt-3">
+                  <span className="text-lg font-semibold">{item.amount}</span>
+                  <span className={`text-sm text-${item.pcColor} ml-2`}>
+                      {item.percentage}
+                  </span>
+                  </p>
+                  <p className="text-sm text-gray-400 mt-1">{item.title}</p>
               </div>
           ))}
       </div>
-  </div>
+    </div>
   )
 }
 

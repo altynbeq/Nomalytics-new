@@ -53,7 +53,6 @@ const DailySalesStats = () => {
                         </div>
                     </div>
                   </div>
-                 
                   
                   <div className="mt-10 flex justify-center">
                       <Button
