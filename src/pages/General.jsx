@@ -1,11 +1,15 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import { useStateContext } from '../contexts/ContextProvider';
 
 import { FirstRowStats, SalesDouble, MonthlyRevenueBars, SecondRowPie, ThirdRowTransList, ThirdRowLineChart, LastRowWeaklyStats, LastRowSecondComp, LastRowThirdComp } from '../components/General';
 
 const General = () => {
-  const { currentColor, currentMode } = useStateContext();
+  const { currentColor, currentMode, setActiveMenu } = useStateContext();
+
+  useEffect(()=> {
+    setActiveMenu(false);
+  },[])
 
   return (
     <div className="mt-12">

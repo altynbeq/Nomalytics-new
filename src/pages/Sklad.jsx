@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Header } from '../components';
 import { SkladStatistivs, SkladStats } from '../components/Sklad';
 import { Orders } from '../pages';
@@ -6,8 +6,10 @@ import { Button } from '../components';
 import { useStateContext } from '../contexts/ContextProvider';
 
 const Sklad = () => {
-  const { currentColor, currentMode } = useStateContext();
-
+  const { currentColor, currentMode, setActiveMenu } = useStateContext();
+  useEffect(() => {
+    setActiveMenu(false);
+  },[])
   return (
     <div className='mt-12 flex w-full  flex-col  justify-center align-center p-10 '>
         <div className="flex flex-row gap-10 justify-center align-top m-5 xs:mr-6 xs:ml-6 lg:flex-row 2xl:flex-row items-center">

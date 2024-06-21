@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
 import { dropdownData } from '../data/ecomData';
 import { useStateContext } from '../contexts/ContextProvider';
@@ -12,7 +12,11 @@ const DropDown = ({ currentMode }) => (
 );
 
 const Finance = () => {
-  const { currentColor, currentMode } = useStateContext();
+  const { currentColor, currentMode, setActiveMenu } = useStateContext();
+  
+  useEffect(()=> {
+    setActiveMenu(false);
+  },[]);
 
   return (
     <div className="mt-12">

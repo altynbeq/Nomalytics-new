@@ -3,14 +3,16 @@ import { floristList, cusSupportList, tasksList } from '../data/workersData';
 import { floristsStats, callCenterStats } from '../data/workersData';
 
 import { WorkersList, Tasks, WorkerStats } from '../components/Workers';
-// import { fetchDeals } from '../methods/getDeals';
+import { useStateContext } from '../contexts/ContextProvider';
 import { fetchLeads } from '../methods/getLeads';
 
 const Workers = () => {
-
+  const { setActiveMenu } = useStateContext();
+ 
   useEffect(() => {
     // fetchDeals();
     fetchLeads();
+    setActiveMenu(false);
   },[]);
 
   return (
