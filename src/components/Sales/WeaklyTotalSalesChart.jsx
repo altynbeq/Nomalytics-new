@@ -6,11 +6,11 @@ import { stackedCustomSeries, stackedPrimaryXAxis, stackedPrimaryYAxis } from '.
 
 const WeaklyTotalSalesChart = () => {
   return (
-    <div className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg p-6 rounded-2xl ">
+    <div className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg p-6 md:w-[45%]  rounded-2xl ">
         <div className="flex justify-between items-center gap-2 mb-10">
-          <p className="text-xl font-semibold">Продажи за неделю</p>
+          <p className="md:text-xl font-semibold">Продажи за неделю</p>
           <div className="flex items-center gap-4">
-              <p className="flex items-center gap-2 text-green-400 hover:drop-shadow-xl">
+              <p className="flex md:text-xl items-center gap-2 text-green-400 hover:drop-shadow-xl">
               <span>
                   <GoPrimitiveDot />
               </span>
@@ -18,9 +18,8 @@ const WeaklyTotalSalesChart = () => {
               </p>
           </div>
         </div>
-        <div className="md:w-full overflow-auto">
-          <Stacked stackedCustomSeries={stackedCustomSeries} stackedPrimaryXAxis={stackedPrimaryXAxis} stackedPrimaryYAxis={stackedPrimaryYAxis} width="550px" />
-        </div>
+          
+        <Stacked stackedCustomSeries={stackedCustomSeries} stackedPrimaryXAxis={stackedPrimaryXAxis} stackedPrimaryYAxis={stackedPrimaryYAxis}  />
     </div>
   )
 }

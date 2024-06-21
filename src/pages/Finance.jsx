@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
 import { dropdownData } from '../data/ecomData';
 import { useStateContext } from '../contexts/ContextProvider';
-import { RevenueByMonthsStacked, EarlyRevenueStats, DailyRevenue, WeaklyRevenueOverviewStacked, TotalRevenuePie, WeaklyStatistics, TotalRevenueChart } from '../components/Finance';
+import { MonthlyRevenueChart, OverallRevenueChart, RevenueByMonthsStacked, EarlyRevenueStats, DailyRevenue, WeaklyRevenueOverviewStacked, TotalRevenuePie, WeaklyStatistics, TotalRevenueChart } from '../components/Finance';
 import { stackedCustomSeries, stackedPrimaryXAxis, stackedPrimaryYAxis } from '../data/financeData';
 
 const DropDown = ({ currentMode }) => (
@@ -35,8 +35,12 @@ const Finance = () => {
 
       <div className="flex gap-8 m-4 flex-wrap justify-center">
         <WeaklyStatistics />
-        <TotalRevenueChart />
+        <OverallRevenueChart />
       </div>
+      <div className="flex gap-8 m-4 flex-wrap justify-center">
+            <MonthlyRevenueChart 
+            />
+          </div>
     </div>
   );
 };

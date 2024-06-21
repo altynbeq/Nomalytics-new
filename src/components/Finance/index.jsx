@@ -6,3 +6,5 @@ export { default as WeaklyRevenueOverviewStacked } from './WeaklyRevenueOverview
 export { default as TotalRevenuePie } from './TotalRevenuePie';
 export { default as WeaklyStatistics } from './WeaklyStatistics';
 export { default as TotalRevenueChart } from './TotalRevenueChart';
+export { default as OverallRevenueChart } from './YearlyFinanceIncome'
+export { default as MonthlyRevenueChart } from './MonthlyFinanceIncome'

@@ -11,7 +11,7 @@ const BestSalesStats = () => {
             <div className="flex flex-wrap justify-center">
                 <div className="md:w-400 bg-white dark:text-gray-200 dark:bg-secondary-dark-bg rounded-2xl p-1 m-3">
                 <div className="flex justify-between">
-                    <p className="text-xl font-semibold">Недельная статистика</p>
+                    <p className="md:text-xl font-semibold">Недельная статистика</p>
                     <button type="button" className="text-xl font-semibold text-gray-500">
                     <IoIosMore />
                     </button>
@@ -24,7 +24,7 @@ const BestSalesStats = () => {
                         <button
                             type="button"
                             style={{ background: item.iconBg }}
-                            className="text-2xl hover:drop-shadow-xl text-white rounded-full p-3"
+                            className="md:text-2xl hover:drop-shadow-xl text-white rounded-full p-3"
                         >
                             {item.icon}
                         </button>
@@ -34,7 +34,7 @@ const BestSalesStats = () => {
                         </div>
                         </div>
 
-                        <p className={`text-${item.pcColor}`}>{item.amount}</p>
+                        <p className={`text-${item.pcColor} text-sm`}>{item.amount}</p>
                     </div>
                     ))}
                     <div className="mt-1">

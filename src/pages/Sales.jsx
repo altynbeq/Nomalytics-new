@@ -12,18 +12,21 @@ const Sales = () => {
     
     return (
         <div className='mt-12 flex flex-col justify-center align-center p-10'>
-            <div className="flex flex-wrap lg:flex-nowrap justify-center align-top">
+            <div className="flex flex-wrap lg:flex-nowrap justify-center align-top xs:flex-col">
                 <DailySalesStats />
                 <BestSalesStats />
             </div>
             <div className='flex m-3 mt-5 flex-wrap justify-center gap-[1.5rem] items-center'>
                 <BoxTotalStats />
             </div>
-            <div className="flex m-3 mt-5 flex-wrap justify-center gap-[1.5rem] items-center">
+            <div className="flex m-3 mt-5 flex-wrap justify-center gap-[1.5rem] w-full items-center">
                 <WeaklyTotalSalesChart />
                 <MonthlyTotalSalesChart />
             </div>
-            <div className="flex m-3 mt-5 flex-wrap justify-center gap-[1.5rem] items-center w-full">
+            {/* <div className="flex m-3 mt-5 flex-row md:flex-row sm:flex-col xs:flex-col justify-center gap-[1.5rem] w-[100%] items-center">
+                <MonthlyTotalSalesChart />
+            </div> */}
+            <div className="flex m-3 mt-5 flex-wrap justify-center gap-[1.5rem] w-full items-center">
                 <OverallRevenueChart />
             </div>
         </div>
