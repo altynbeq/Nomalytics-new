@@ -11,7 +11,7 @@ module.exports = {
         'xs': {'max': '390px'}, 
       },
       fontSize: {
-        14: '14px',
+        14: '10px',
       },
       backgroundColor: {
         'main-bg': '#FAFBFB',
