@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import { useStateContext } from '../contexts/ContextProvider';
 
 import { DailySalesStats, BestSalesStats, BoxTotalStats, WeaklyTotalSalesChart, MonthlyTotalSalesChart, OverallRevenueChart } from '../components/Sales';
+import { FirstRowStats } from '../components/General';
 
 const Sales = () => {
     const { currentColor, currentMode,setActiveMenu } = useStateContext(); 
@@ -11,13 +12,14 @@ const Sales = () => {
     },[]);
     
     return (
-        <div className='mt-12 flex flex-col justify-center align-center p-10'>
+        <div className='mt-12 '>
             <div className="flex flex-wrap  justify-center align-top xs:flex-col  m-3  gap-[1.5rem] items-center">
                 <DailySalesStats />
                 <BestSalesStats />
             </div>
             <div className='flex m-3 mt-5 flex-wrap justify-center gap-[1.5rem] items-center'>
-                <BoxTotalStats />
+                {/* <BoxTotalStats /> */}
+                <FirstRowStats />
             </div>
             <div className="flex m-3 mt-5 flex-wrap justify-center gap-[1.5rem] w-full items-center">
                 <WeaklyTotalSalesChart />
