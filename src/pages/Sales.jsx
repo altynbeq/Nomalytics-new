@@ -13,11 +13,11 @@ const Sales = () => {
     
     return (
         <div className='mt-12 '>
-            <div className="flex  w-[100%] flex-wrap  justify-center align-top xs:flex-col  mx-3  gap-[0.5rem] items-center">
+            <div className="flex  w-[100%] flex-wrap  justify-center align-top xs:flex-col  md:mx-3  gap-[0.5rem] items-center">
                 <DailySalesStats />
                 <BestSalesStats />
             </div>
-            <div className='flex mx-3  flex-wrap justify-center gap-[1.5rem] items-center'>
+            <div className='flex md:mx-3  flex-wrap justify-center gap-[1.5rem] items-center'>
                 {/* <BoxTotalStats /> */}
                 <FirstRowStats />
             </div>
