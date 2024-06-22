@@ -38,7 +38,7 @@ const BestSalesStats = () => {
                     </div>
                     ))}
                     <div className="mt-4">
-                    <SparkLine currentColor={currentColor} id="area-sparkLine" height="160px" type="Area" data={SparklineAreaData}  color="rgb(242, 252, 253)" />
+                    <SparkLine currentColor={currentColor} id="area-sparkLine" height="120px" type="Area" data={SparklineAreaData}  color="rgb(242, 252, 253)" />
                     </div>
                 </div>
                 </div>

@@ -25,7 +25,7 @@ const FirstRowStats = () => {
                         </button>
                         <p className="mt-3">
                         <span className="text-lg font-semibold">{item.amount}</span>
-                        <span className={`text-sm text-${item.pcColor} mr-5`}>
+                        <span className={`text-sm text-${item.pcColor} mx-4 mr-3`}>
                             {item.percentage}
                         </span>
                         </p>

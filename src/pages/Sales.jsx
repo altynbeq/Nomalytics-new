@@ -12,7 +12,7 @@ const Sales = () => {
     },[]);
     
     return (
-        <div className='mt-12 '>
+        <div className='mt-12 overflow-none '>
             <div className="flex  w-[100%] flex-wrap  justify-center align-top xs:flex-col  md:mx-3  gap-[0.5rem] items-center">
                 <DailySalesStats />
                 <BestSalesStats />

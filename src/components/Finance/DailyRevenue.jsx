@@ -79,7 +79,7 @@ const DailyRevenue = () => {
                     <h2>Способы оплат</h2>
                 </div>
                 
-              <Pie id="pie-money-flow" data={revenueTypesData} legendVisiblity={false} height="280px" />
+              <Pie id="pie-money-flow" data={revenueTypesData} legendVisiblity={false} height="230px" />
               <div className='flex flex-row justify-between gap-8'>
                 <div className=''>
                     <p className="flex items-center gap-2 text-pink-600 hover:drop-shadow-xl">
