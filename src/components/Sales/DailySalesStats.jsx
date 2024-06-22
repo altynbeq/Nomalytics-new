@@ -7,11 +7,11 @@ import { useStateContext } from '../../contexts/ContextProvider';
 
 const DailySalesStats = () => {
     const { currentColor, currentMode } = useStateContext();
-
+ 
   return (
-    <div className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg m-3 p-4 rounded-2xl ">
+    <div className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg m-3 p-4 w-[90%] md:w-[50%] rounded-2xl ">
             <div className="flex flex-col md:flex-row justify-between">
-                <p className="font-semibold  md:text-xl">Обновления по доходам</p>
+                <p className="font-semibold  md:text-xl">Обновления по доходам V1</p>
             </div>
             <div className="mt-10 flex flex-col lg:flex-row gap-10 justify-center">
 
@@ -69,7 +69,7 @@ const DailySalesStats = () => {
                       <div className='flex justify-center text-center flex-col'>
                         <h2>Способы оплат</h2>
                       </div>
-                  <Pie id="pie-money-flow" data={revenueTypesDataSales} legendVisiblity={false} height="280px" width="350px"/>
+                  <Pie id="pie-money-flow" data={revenueTypesDataSales} legendVisiblity={false} height="280px" />
                   <div className='flex flex-row justify-between'>
                   <p className="flex items-center gap-2 text-cyan-600 hover:drop-shadow-xl">
                          <span>

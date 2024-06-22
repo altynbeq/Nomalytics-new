@@ -7,11 +7,11 @@ import { SparkLine } from '../../components';
 const BestSalesStats = () => {
     const { currentColor, currentMode } = useStateContext();
     return (
-        <div className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg p-1 ml-1 h-[500px] rounded-2xl">
+        <div className="bg-white dark:text-gray-200 justify-center align-center text-center dark:bg-secondary-dark-bg p-1 ml-1 w-[90%] md:w-[30%] rounded-2xl">
             <div className="flex flex-wrap justify-center">
-                <div className="md:w-400 bg-white dark:text-gray-200 dark:bg-secondary-dark-bg rounded-2xl p-1 m-3">
+                <div className="md:w-400 bg-white dark:text-gray-200 dark:bg-secondary-dark-bg rounded-2xl p-6 m-3">
                 <div className="flex justify-between">
-                    <p className="md:text-xl font-semibold">Недельная статистика</p>
+                    <p className="text-xl font-semibold">Недельная статистика</p>
                     <button type="button" className="text-xl font-semibold text-gray-500">
                     <IoIosMore />
                     </button>
@@ -24,7 +24,7 @@ const BestSalesStats = () => {
                         <button
                             type="button"
                             style={{ background: item.iconBg }}
-                            className="md:text-2xl hover:drop-shadow-xl text-white rounded-full p-3"
+                            className="text-2xl hover:drop-shadow-xl text-white rounded-full p-3"
                         >
                             {item.icon}
                         </button>
@@ -34,11 +34,11 @@ const BestSalesStats = () => {
                         </div>
                         </div>
 
-                        <p className={`text-${item.pcColor} text-sm`}>{item.amount}</p>
+                        <p className={`text-${item.pcColor}`}>{item.amount}</p>
                     </div>
                     ))}
-                    <div className="mt-1">
-                        <SparkLine currentColor={currentColor} id="area-sparkLine" height="160px" type="Area" data={SparklineAreaData}  color="rgb(242, 252, 253)" />
+                    <div className="mt-4">
+                    <SparkLine currentColor={currentColor} id="area-sparkLine" height="160px" type="Area" data={SparklineAreaData}  color="rgb(242, 252, 253)" />
                     </div>
                 </div>
                 </div>

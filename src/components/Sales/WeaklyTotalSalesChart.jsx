@@ -6,7 +6,7 @@ import { stackedCustomSeries, stackedPrimaryXAxis, stackedPrimaryYAxis } from '.
 
 const WeaklyTotalSalesChart = () => {
   return (
-    <div className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg p-6 md:w-[45%]  rounded-2xl ">
+    <div className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg p-6 md:w-[40%] w-[90%] rounded-2xl ">
         <div className="flex justify-between items-center gap-2 mb-10">
           <p className="md:text-xl font-semibold">Продажи за неделю</p>
           <div className="flex items-center gap-4">
