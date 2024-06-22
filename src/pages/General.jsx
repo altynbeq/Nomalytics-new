@@ -13,12 +13,12 @@ const General = () => {
 
   return (
     <div className="mt-12">
-      <div className='flex m-3 mt-5 flex-wrap justify-center gap-[1.5rem] items-center'>
+      <div className='flex mx-3 mt-5 flex-wrap justify-center gap-[1.5rem] items-center'>
         <FirstRowStats />
       </div>
-      <div className="flex gap-4 flex-wrap justify-center">
+      <div className="flex  gap-4 flex-col md:flex-row  justify-center">
         <SalesDouble />
-        <div className='flex xs:flex-row flex-col w-[380px]'>
+        <div className='flex flex-wrap md:flex-col  w-full'>
           <MonthlyRevenueBars />
           <SecondRowPie />
         </div>
