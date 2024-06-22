@@ -25,7 +25,7 @@ const Finance = () => {
         <EarlyRevenueStats />
       </div>
 
-      <div className="flex gap-4 flex-col md:flex-row justify-center">
+      <div className="flex  gap-4 flex-col md:flex-row  justify-center">
         <DailyRevenue />
         <div className=' flex justify-center align-center flex-col  w-[100%] md:w-[30%]'>
           <WeaklyRevenueOverviewStacked />
@@ -37,9 +37,9 @@ const Finance = () => {
         <WeaklyStatistics />
         <OverallRevenueChart />
       </div>
-      <div className="flex gap-8 m-4 flex-wrap justify-center">
-            <MonthlyRevenueChart />
-          </div>
+      <div className="flex m-3 mt-5 flex-wrap justify-center gap-[1.5rem] w-full items-center">
+        <MonthlyRevenueChart />
+      </div>
     </div>
   );
 };

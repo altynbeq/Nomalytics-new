@@ -55,7 +55,7 @@ const MonthlyRevenueChart = (monthFinanceData) => {
             </div>
             </div>
             <div className="w-full overflow-auto flex justify-center align-center mr-5">
-                <Stacked id="MonthlyRevenueChart" stackedCustomSeries={stackedCustomSeries} stackedPrimaryXAxis={stackedPrimaryXAxis} stackedPrimaryYAxis={stackedPrimaryYAxis}  width="1050px"  />
+                <Stacked id="MonthlyRevenueChart" stackedCustomSeries={stackedCustomSeries} stackedPrimaryXAxis={stackedPrimaryXAxis} stackedPrimaryYAxis={stackedPrimaryYAxis}  />
             </div>
         </div>
     );
