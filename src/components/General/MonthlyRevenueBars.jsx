@@ -23,7 +23,7 @@ const MonthlyRevenueBars = () => {
                 id="column-sparkLine"
                 height="100px"
                 type="Column"
-                width="inherit"
+                width="250px"
                 data={SparklineAreaData}
                 color="rgb(242, 252, 253)"
                 />
