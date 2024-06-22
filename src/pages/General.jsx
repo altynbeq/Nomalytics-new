@@ -18,18 +18,18 @@ const General = () => {
       </div>
       <div className="flex  gap-4 flex-col md:flex-row  justify-center">
         <SalesDouble />
-        <div className=' flex justify-center align-center flex-col  w-[90%] md:w-[35%]'>
+        <div className=' flex justify-center align-center flex-col  w-[100%] md:w-[35%]'>
           <MonthlyRevenueBars />
           <SecondRowPie />
         </div>
       </div>
 
-      <div className="flex gap-10 m-4 flex-wrap justify-center">
+      <div className="flex gap-10 m-4 flex-col md:flex-row justify-center">
         <ThirdRowTransList />
         <ThirdRowLineChart />
       </div>
 
-      <div className="flex flex-wrap justify-center">
+      <div className="flex flex-col md:flex-row justify-center">
         <LastRowWeaklyStats />
         <LastRowSecondComp />
         <LastRowThirdComp />
