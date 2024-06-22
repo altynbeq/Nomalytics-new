@@ -9,7 +9,7 @@ const DailyRevenue = () => {
     const { currentColor, currentMode } = useStateContext();
 
   return (
-    <div className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg m-3 p-4 w-[50%] md:w-[50%]  rounded-2xl  ">
+    <div className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg m-3 p-4 w-[90%] md:w-[50%]  rounded-2xl  ">
           <div className="flex justify-between">
             <p className="font-semibold text-xl">Доходы за день</p>
             <div className="flex items-center gap-4">
