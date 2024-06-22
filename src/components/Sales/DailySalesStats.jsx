@@ -65,7 +65,7 @@ const DailySalesStats = () => {
                   </div>
                 </div>
                 
-                <div className="m-auto lg:m-0 ">
+                <div className="m-auto lg:m-0 w-[40%] ">
                       <div className='flex justify-center text-center flex-col'>
                         <h2>Способы оплат</h2>
                       </div>
