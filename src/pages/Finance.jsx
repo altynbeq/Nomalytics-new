@@ -33,7 +33,7 @@ const Finance = () => {
         </div>
       </div>
 
-      <div className="flex gap-8 m-4 w-full items-center flex-col md:flex-row justify-center">
+      <div className="flex gap-8 my-4 w-full items-center flex-col md:flex-row justify-center">
         <WeaklyStatistics />
         <OverallRevenueChart />
       </div>
