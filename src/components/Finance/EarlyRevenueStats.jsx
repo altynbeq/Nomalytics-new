@@ -7,7 +7,7 @@ const EarlyRevenueStats = () => {
   const { currentColor, currentMode } = useStateContext();
 
   return (
-    <div className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg m-5 md:m-1 p-4 rounded-2xl   ">
+    <div className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg m-5 md:m-1 p-4 rounded-2xl w-[90%] md:w-[30%]   ">
           <div className="flex justify-between">
             <p className="font-semibold text-xl">Доходы за год</p>
             <div className="flex items-center gap-4">
@@ -33,7 +33,7 @@ const EarlyRevenueStats = () => {
                     <p className="text-gray-500 mt-1">Прибыль</p>
                 </div>
               </div>
-              <div className="mt-8 gap-2 flex flex-row justify-between">
+              <div className="mt-8 gap-2 w-full flex flex-row justify-between">
                 <div className='flex justify-center flex-col text-center'>
                     <p className="md:text-3xl font-semibold">127 133</p>
                     <p className="text-gray-500 mt-1">Покупок</p>
