@@ -74,7 +74,7 @@ const DailyRevenue = () => {
               </div>
             </div>
 
-            <div> 
+            <div className='w-fit'> 
                 <div className='flex align-center justify-center'>
                     <h2>Способы оплат</h2>
                 </div>

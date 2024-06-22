@@ -25,7 +25,7 @@ const EarlyRevenueStats = () => {
               <div>
                 <div className='flex justify-center flex-col text-center'>
                     <p>
-                        <span className="md:text-3xl font-semibold">730,438 тг</span>
+                        <span className="text-3xl font-semibold">730,438 тг</span>
                         <span className="p-1.5 hover:drop-shadow-xl cursor-pointer rounded-full text-white bg-green-400 ml-3 text-xs">
                             23%
                         </span>
@@ -35,15 +35,15 @@ const EarlyRevenueStats = () => {
               </div>
               <div className="mt-8 gap-2 w-full flex flex-row justify-between">
                 <div className='flex justify-center flex-col text-center'>
-                    <p className="md:text-3xl font-semibold">127 133</p>
+                    <p className="text-3xl font-semibold">127 133</p>
                     <p className="text-gray-500 mt-1">Покупок</p>
                 </div>
                 <div className='flex justify-center flex-col text-center'>
-                    <p className="md:text-3xl font-semibold">37</p>
+                    <p className="text-3xl font-semibold">37</p>
                     <p className="text-gray-500 mt-1">Скидок</p>
                 </div>
                 <div className='flex justify-center flex-col text-center'>
-                    <p className="md:text-3xl font-semibold">1</p>
+                    <p className="text-3xl font-semibold">1</p>
                     <p className="text-gray-500 mt-1">Cписание</p>
                 </div>
               </div>
@@ -51,7 +51,7 @@ const EarlyRevenueStats = () => {
                 <div>
                     <div className='flex justify-center flex-col text-center'>
                         <p>
-                            <span className="md:text-3xl font-semibold">14,500 тг</span>
+                            <span className="text-3xl font-semibold">14,500 тг</span>
                             <span className="p-1.5 hover:drop-shadow-xl cursor-pointer rounded-full text-white bg-red-400 ml-3 text-xs">
                                 7%
                             </span>
