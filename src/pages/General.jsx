@@ -29,7 +29,7 @@ const General = () => {
         <ThirdRowLineChart />
       </div>
 
-      <div className="flex flex-col md:flex-row justify-center">
+      <div className="flex flex-col align-center md:flex-row w-[100%]  justify-center">
         <LastRowWeaklyStats />
         <LastRowSecondComp />
         <LastRowThirdComp />
