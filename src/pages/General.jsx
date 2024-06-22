@@ -18,7 +18,7 @@ const General = () => {
       </div>
       <div className="flex  gap-4 flex-col md:flex-row  justify-center">
         <SalesDouble />
-        <div className='flex flex-wrap md:flex-col  w-full'>
+        <div className='flex flex-wrap md:flex-col'>
           <MonthlyRevenueBars />
           <SecondRowPie />
         </div>
