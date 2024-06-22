@@ -20,7 +20,7 @@ const EarlyRevenueStats = () => {
             </div>
           </div>
           
-          <div className="mt-10 flex gap-10 flex-row w-fit p-4 ml-10 justify-center">
+          <div className="mt-10 flex gap-10 flex-row p-4 md:ml-10 justify-center">
             <div className="  border-color m-8  ">
               <div>
                 <div className='flex justify-center flex-col text-center'>
