@@ -20,7 +20,7 @@ const Finance = () => {
  
   return (
     <div className="mt-12">
-      <div className="flex flex-wrap lg:flex-nowrap gap-5 justify-center ">
+      <div className="flex mt-8 md:mt-0 flex-wrap lg:flex-nowrap gap-5 justify-center ">
         <RevenueByMonthsStacked />
         <EarlyRevenueStats />
       </div>
