@@ -17,7 +17,7 @@ const Finance = () => {
   useEffect(()=> {
     setActiveMenu(false);
   },[]);
-
+ 
   return (
     <div className="mt-12">
       <div className="flex flex-wrap lg:flex-nowrap gap-5 justify-center ">
@@ -25,21 +25,20 @@ const Finance = () => {
         <EarlyRevenueStats />
       </div>
 
-      <div className="flex gap-4 flex-wrap justify-center">
+      <div className="flex gap-4 flex-col md:flex-row justify-center">
         <DailyRevenue />
-        <div>
+        <div className=' flex justify-center align-center flex-col  w-[100%] md:w-[30%]'>
           <WeaklyRevenueOverviewStacked />
           <TotalRevenuePie />
         </div>
       </div>
 
-      <div className="flex gap-8 m-4 flex-wrap justify-center">
+      <div className="flex gap-8 m-4 w-full items-center flex-col md:flex-row justify-center">
         <WeaklyStatistics />
         <OverallRevenueChart />
       </div>
       <div className="flex gap-8 m-4 flex-wrap justify-center">
-            <MonthlyRevenueChart 
-            />
+            <MonthlyRevenueChart />
           </div>
     </div>
   );

@@ -2,7 +2,7 @@ import React from 'react';
 import { useStateContext  } from '../../contexts/ContextProvider';
 import { weakylRevenue } from '../../data/financeData';
 import { SparkLine } from '../../components';
-
+ 
 const WeaklyRevenueOverviewStacked = () => {
     const { currentColor, currentMode } = useStateContext();
     return (
@@ -15,7 +15,7 @@ const WeaklyRevenueOverviewStacked = () => {
                 </div>
             </div>
             <div className="mt-4">
-                <SparkLine currentColor={currentColor} id="column-sparkLine" height="100px" type="Column" data={weakylRevenue} width="320" color="rgb(242, 252, 253)" />
+                <SparkLine currentColor={currentColor} id="column-sparkLine"  type="Column" data={weakylRevenue}  color="rgb(242, 252, 253)" />
             </div>
         </div>
     );

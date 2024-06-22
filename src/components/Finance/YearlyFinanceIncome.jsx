@@ -17,7 +17,7 @@ const OverallRevenueChart = () => {
             </p>
         </div>
         </div>
-        <div className="w-full overflow-auto flex justify-center align-center mr-5">
+        <div className=" overflow-auto flex justify-center align-center mr-5">
           <Stacked id="OverallRevenueChart" stackedCustomSeries={stackedCustomSeriesYearly} stackedPrimaryXAxis={stackedPrimaryYAxisYearly} stackedPrimaryYAxis={stackedPrimaryXAxisYearly}   />
         </div>
     </div>

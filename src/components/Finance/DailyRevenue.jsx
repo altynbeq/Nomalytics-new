@@ -9,7 +9,7 @@ const DailyRevenue = () => {
     const { currentColor, currentMode } = useStateContext();
 
   return (
-    <div className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg m-3 p-4 rounded-2xl md:w-780  ">
+    <div className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg m-3 p-4 rounded-2xl  ">
           <div className="flex justify-between">
             <p className="font-semibold text-xl">Доходы за день</p>
             <div className="flex items-center gap-4">
@@ -22,7 +22,7 @@ const DailyRevenue = () => {
             </div>
           </div>
           
-          <div className="mt-10 flex gap-10 flex-row w-fit justify-center">
+          <div className="mt-10 flex gap-10 flex-col md:flex-row w-fit justify-center">
 
             <div className=" border-r-1 border-color m-4 pr-10">
               
@@ -79,8 +79,8 @@ const DailyRevenue = () => {
                     <h2>Способы оплат</h2>
                 </div>
                 
-              <Pie id="pie-money-flow" data={revenueTypesData} legendVisiblity={false} height="280px" width="350px"/>
-              <div className='flex flex-row justify-between'>
+              <Pie id="pie-money-flow" data={revenueTypesData} legendVisiblity={false} height="280px" />
+              <div className='flex flex-row justify-between gap-8'>
                 <div className=''>
                     <p className="flex items-center gap-2 text-pink-600 hover:drop-shadow-xl">
                         <span>
