@@ -24,7 +24,7 @@ const General = () => {
         </div>
       </div>
 
-      <div className="flex gap-10 m-4 flex-col md:flex-row justify-center">
+      <div className="flex gap-6 m-4 flex-col md:flex-row justify-center">
         <ThirdRowTransList />
         <ThirdRowLineChart />
       </div>
