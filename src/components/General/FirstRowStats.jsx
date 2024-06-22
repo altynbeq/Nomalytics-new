@@ -11,7 +11,7 @@ const FirstRowStats = () => {
     const { currentColor, currentMode } = useStateContext();
     return (
         <div className="grid xl:justify-center xl:w-full xl:p-8 xl:mx-8 xl:pl-0  md:p-50 w-[90%]">
-            <div className="grid grid-cols-2 gap-10  sm:grid-cols-2 p-5  md:grid-cols-2 lg:grid-cols-4 ml-5    ">
+            <div className="grid grid-cols-2 gap-10  sm:grid-cols-2 p-5  md:grid-cols-2 lg:grid-cols-4 mr-5">
                 {earningData.map((item) => (
                     <div key={item.title} className="   bg-white  h-full md:w-[90%] lg:w-[90%]  dark:text-gray-200 dark:bg-secondary-dark-bg  p-4 pt-9 rounded-2xl flex-shrink-0
                     xl:w-full xl:pt-6  xl:pb-7 xl:pr-20 xl:pl-20 2xl:mx-15  sm:w-[105%]  xs:p-7
@@ -25,7 +25,7 @@ const FirstRowStats = () => {
                         </button>
                         <p className="mt-3">
                         <span className="text-lg font-semibold">{item.amount}</span>
-                        <span className={`text-sm text-${item.pcColor} ml-5`}>
+                        <span className={`text-sm text-${item.pcColor} mr-5`}>
                             {item.percentage}
                         </span>
                         </p>
