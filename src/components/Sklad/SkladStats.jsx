@@ -6,54 +6,50 @@ import { useStateContext } from '../../contexts/ContextProvider';
 const SkladStats = () => {
   const { currentColor, currentMode } = useStateContext();
   return (
-    <div className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg  p-4 rounded-2xl w-[80%] md:w-fit    md:mr-0 ">
+    <div className="bg-white dark:text-gray-200 justify-center text-center align-center dark:bg-secondary-dark-bg m-5 md:m-1 p-4 rounded-2xl m5 w-[90%] md:w-[30%]   ">
           <div className="flex justify-between">
-            <p className="font-semibold text-xl xs:text-sm xs:ml-12 xs:mt-6 xl:ml-6 xl:mt-4 md:mt-4 md:ml-6 sm:ml-12 sm:mt-8 ">За неделю</p>
+            <p className="font-semibold text-xl">Доходы за год</p>
             <div className="flex items-center gap-4">
-              <p className="flex items-center gap-2 text-green-400 hover:drop-shadow-xl xs:mt-6 xs:mr-12 xl:mr-6 xl:mt-4 md:mr-4 md:mt-4 sm:mt-8 sm:text-lg sm:mr-2 ">
+              <p className="flex items-center gap-2 text-green-400 hover:drop-shadow-xl">
                 <span>
                   <GoPrimitiveDot />
                 </span>
-                <span>12-19 Мая 2024</span>
+                <span>2024</span>
               </p>
             </div>
           </div>
           
-          <div className="mt-10 md:mt-5 xl:my-12 flex gap-10 flex-row w-fit p-1 mx-auto justify-center  xs:p-0 xs:mt-6  ">
-            <div className="  border-color mx-8  ">
+          <div className="mt-10 flex gap-10 flex-row p-4 md:ml-10 justify-center">
+            <div className="  border-color m-8  ">
               <div>
-                <div className='flex justify-center flex-col text-center '>
+                <div className='flex justify-center flex-col text-center'>
                     <p>
-                        <span className="md:text-3xl font-semibold xl:text-4xl 2xl:mt-6">4 500</span>
-                        <span className="p-1.5 hover:drop-shadow-xl cursor-pointer rounded-full text-white bg-green-400 ml-3 text-xs 2xl:mb-2">
-                            23%
-                        </span>
+                        <span className="text-3xl font-semibold">730,438 тг</span>
                     </p>
-                    <p className="text-gray-500 mt-1 sm:mt-4">Сумма списания</p>
+                    <p className="text-gray-500 mt-1">Прибыль</p>
                 </div>
               </div>
-              <div className="mt-0 gap-2 flex flex-row justify-between lg:mt-60 xs:mt-8 xl:mt-8">
+              <div className="mt-8 gap-2 w-full flex flex-row justify-between">
                 <div className='flex justify-center flex-col text-center'>
-                    <p className="md:text-3xl font-semibold xs:text-lg">7 шт</p>
-                    <p className="text-gray-500 mt-1 xs:text-lg">Списано</p>
+                    <p className="text-1xl md:text-3xl font-semibold">127 </p>
+                    <p className="text-gray-500 mt-1">Покупок</p>
                 </div>
                 <div className='flex justify-center flex-col text-center'>
-                    <p className="md:text-3xl text-green-400 font-semibold xs:text-lg">2%</p>
-                    <p className="text-gray-500 mt-1 xs:text-lg">Списано</p>
+                    <p className="text-1xl md:text-3xl font-semibold">37</p>
+                    <p className="text-gray-500 mt-1">Скидок</p>
                 </div>
                 <div className='flex justify-center flex-col text-center'>
-                    <p className="md:text-3xl font-semibold xs:text-lg">2</p>
-                    <p className="text-gray-500 mt-1">Пополнения</p>
+                    <p className="text-1xl md:text-3xl font-semibold">1</p>
+                    <p className="text-gray-500 mt-1">Cписание</p>
                 </div>
               </div>
-              <div className="mt-4 lg:mt-8 md:mt-0 xs:mt-6">
-                    <div className='flex justify-center flex-col text-center'>
-                        <Button
-                        color="white"
-                        bgColor={currentColor}
-                        text="Скачать отчет"
-                        borderRadius="10px" />
-                    </div>
+              <div className="mt-8 flex justify-center">
+                <Button
+                  color="white"
+                  bgColor={currentColor}
+                  text="Скачать отчет"
+                  borderRadius="10px"
+                />
               </div>
             </div>
           </div>
