@@ -6,7 +6,7 @@ import { useStateContext } from '../../contexts/ContextProvider';
 const SkladStats = () => {
   const { currentColor, currentMode } = useStateContext();
   return (
-    <div className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg  p-4 rounded-2xl    xs:mr-4 xs:ml-4 md:mr-0 ">
+    <div className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg  p-4 rounded-2xl w-[90%] md:w-fit    xs:mr-4 xs:ml-4 md:mr-0 ">
           <div className="flex justify-between">
             <p className="font-semibold text-xl xs:text-sm xs:ml-12 xs:mt-6 xl:ml-6 xl:mt-4 md:mt-4 md:ml-6 sm:ml-12 sm:mt-8 ">За неделю</p>
             <div className="flex items-center gap-4">
@@ -20,7 +20,7 @@ const SkladStats = () => {
           </div>
           
           <div className="mt-10 md:mt-5 xl:my-12 flex gap-10 flex-row w-fit p-1 mx-auto justify-center  xs:p-0 xs:mt-6  ">
-            <div className="  border-color m-8  ">
+            <div className="  border-color mx-8  ">
               <div>
                 <div className='flex justify-center flex-col text-center '>
                     <p>
