@@ -20,8 +20,8 @@ import { monthDataSalesFormer } from './data/Sales/MonthDataSalesFormer';
 
 
 const App = () => {
-  const { setCurrentColor, setCurrentMode, currentMode, activeMenu, currentColor, themeSettings, setThemeSettings } = useStateContext();
-  const [ loggedIn, setLoggedIn ] = useState(true);
+  const { isLoggedIn, setCurrentColor, setCurrentMode, currentMode, activeMenu, currentColor, themeSettings, setThemeSettings } = useStateContext();
+  const [ loggedIn, setLoggedIn ] = useState(false);
   const [ hasAccess, setHasAccess ] = useState(false);
   const [ loading, setLoading ] = useState(true);
 
@@ -86,7 +86,7 @@ const App = () => {
 
       setLoading(false);
     }
-    collector();
+      collector();
   }, []);
 
   return (
@@ -96,7 +96,7 @@ const App = () => {
           <Loader />
         ) : (
         <BrowserRouter>
-         { loggedIn == true ? (<>
+         { isLoggedIn == true ? (<>
           <div className="flex relative dark:bg-main-dark-bg">
             <div className="fixed right-4 bottom-4" style={{ zIndex: '1000' }}>
               <TooltipComponent

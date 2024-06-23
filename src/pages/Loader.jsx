@@ -1,5 +1,5 @@
 import React from 'react';
-import loaderIcon from './loaderIcon.gif'; // Adjust the path if necessary
+import loaderIcon from './../data/loaderIcon.gif'; // Adjust the path if necessary
 
 const Loader = () => {
   return (
