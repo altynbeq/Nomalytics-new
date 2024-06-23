@@ -16,8 +16,8 @@ const Sklad = () => {
             <SkladStatistivs />
             <SkladStats />
         </div>
-        <div className='w-[90%] flex justify-center align-center mr-5'>
-            <div className="w-[100%] lg:w-[80%] mt-10  bg-white rounded-3xl">
+        <div className='w-[100%] flex justify-center align-center mr-5'>
+            <div className="w-[90%] lg:w-[80%] mt-10  bg-white rounded-3xl">
                 <Orders />
             </div>
         </div>
