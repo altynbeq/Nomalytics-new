@@ -25,7 +25,7 @@ const EarlyRevenueStats = () => {
               <div>
                 <div className='flex justify-center flex-col text-center'>
                     <p>
-                        <span className=" text-1xl md:text-3xl font-semibold">730,438 тг</span>
+                        <span className="text-3xl font-semibold">730,438 тг</span>
                         <span className="p-1.5 hover:drop-shadow-xl cursor-pointer rounded-full text-white bg-green-400 ml-3 text-xs">
                             23%
                         </span>

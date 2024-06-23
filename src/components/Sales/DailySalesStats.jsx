@@ -65,25 +65,25 @@ const DailySalesStats = () => {
                   </div>
                 </div>
                 
-                <div className="m-auto lg:m-0 w-[40%] justify-center align-center ">
-                      <div className='flex justify-center text-center flex-col'>
+                <div className="m-auto lg:m-0">
+                    <div className='flex justify-center text-center flex-col'>
                         <h2>Способы оплат</h2>
-                      </div>
-                  <Pie id="pie-money-flow" data={revenueTypesDataSales} legendVisiblity={false} height="280px" />
-                  <div className='flex flex-row justify-between'>
-                  <p className="flex items-center gap-2 text-cyan-600 hover:drop-shadow-xl">
+                    </div>
+                    <Pie id="pie-money-flow" data={revenueTypesDataSales} legendVisiblity={false} height="250px"  />
+                    <div className='flex flex-row justify-between'>
+                        <p className="flex items-center gap-2 text-cyan-600 hover:drop-shadow-xl">
                          <span>
                          <GoPrimitiveDot />
                          </span>
                          <span>Online</span>
-                     </p>
-                     <p className="flex items-center gap-2 text-gray-600 hover:drop-shadow-xl">
+                        </p>
+                        <p className="flex items-center gap-2 text-gray-600 hover:drop-shadow-xl">
                          <span>
                          <GoPrimitiveDot />
                          </span>
                          <span>Offline</span>
-                     </p>
-               </div>
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
