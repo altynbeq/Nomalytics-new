@@ -1,11 +1,12 @@
 import React from 'react';
+import loaderIcon from './loaderIcon.gif'; // Adjust the path if necessary
 
 const Loader = () => {
   return (
-    <div className="flex items-center justify-center h-screen w-screen">
+    <div className="flex items-center justify-center text-center h-screen w-screen">
       <div className="text-center">
-        <div className="loader border-t-4 border-blue-500 rounded-full w-12 h-12 mb-4 animate-spin"></div>
-        <p className="text-lg font-semibold">Loading...</p>
+        <img src={loaderIcon} alt="Loading..." className="w-22 h-22 mb-4" />
+        <p className="text-lg font-semibold">Загрузка...</p>
       </div>
     </div>
   );

@@ -4,15 +4,36 @@ import { FiSettings } from 'react-icons/fi';
 import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 
 import { Navbar, Footer, Sidebar, ThemeSettings } from './components';
-import { General, Sales, NoAccess, LogInForm, ComingSoon, Sklad, Finance, Workers } from './pages';
+import { General, Sales, NoAccess, LogInForm, ComingSoon, Sklad, Finance, Workers, Loader } from './pages';
 import './App.css';
 
 import { useStateContext } from './contexts/ContextProvider';
+
+import { fetchDeals } from './methods/getDeals';
+import { fetchLeads } from './methods/getLeads';
+import { formatDateRange } from './methods/dateFormat';
+import { getDateRange } from './methods/getDateRange';
+import { dealsDataCollector } from './data/Finance/WeekDataFinanceFormer';
+import { monthDealsDataCollector } from './data/Finance/MonthDataFinanceFormer';
+import { weekDataSalesFormer } from './data/Sales/WeekDataSalesFormer';
+import { monthDataSalesFormer } from './data/Sales/MonthDataSalesFormer';
+
 
 const App = () => {
   const { setCurrentColor, setCurrentMode, currentMode, activeMenu, currentColor, themeSettings, setThemeSettings } = useStateContext();
   const [ loggedIn, setLoggedIn ] = useState(true);
   const [ hasAccess, setHasAccess ] = useState(false);
+  const [ loading, setLoading ] = useState(true);
+
+  // deals data for periods
+  const [dayFinanceData, setDayFinanceData] = useState([]);
+  const [weekFinanceData, setWeekFinanceData] = useState([]);
+  const [monthFinanceData, setMonthFinanceData] = useState([]);
+
+  // leads data for periods
+  const [dayLeadsData, setDayLeadsData] = useState([]);
+  const [weekLeadsData, setWeekLeadsData] = useState([]);
+  const [monthLeadsData, setMonthLeadsData] = useState([]);
 
   useEffect(() => {
     const currentThemeColor = localStorage.getItem('colorMode');
@@ -21,11 +42,59 @@ const App = () => {
       setCurrentColor(currentThemeColor);
       setCurrentMode(currentThemeMode);
     }
+
+    async function collector(){
+      // deals bitrix 24
+
+      const dateDay = await getDateRange('today');
+      const dataDay = await fetchDeals(dateDay);
+      const formedDataDay = await dealsDataCollector(dataDay);
+      const dayDate = await formatDateRange('day', dateDay);
+      formedDataDay.date = dayDate;
+      setDayFinanceData(formedDataDay);
+
+      const dateWeek = await getDateRange('week');
+      const dataWeek = await fetchDeals(dateWeek);
+      const formedDataWeek = await dealsDataCollector(dataWeek);
+      const weekDate = await formatDateRange('week', dateDay);
+      formedDataWeek.date = weekDate;
+      setWeekFinanceData(formedDataWeek);
+
+      const dateMonth = await getDateRange('month');
+      const dataMonth = await fetchDeals(dateMonth);
+      const formedDataMonth = await monthDealsDataCollector(dataMonth);
+      const monthDate = await formatDateRange('month', dateMonth);
+      formedDataMonth.date = monthDate;
+      setMonthFinanceData(formedDataMonth);
+
+      const leadsDataDay = await fetchLeads(dateDay);
+      const formedDayLeadsData = await weekDataSalesFormer(leadsDataDay);
+      const formatedDate = await formatDateRange('day', dateDay);
+      formedDayLeadsData.date = formatedDate;
+      setDayLeadsData(formedDayLeadsData);
+
+      const leadsDataWeek = await fetchLeads(dateWeek);
+      const formedWeekLeadsData = await weekDataSalesFormer(leadsDataWeek);
+      formedWeekLeadsData.date = weekDate;
+      setWeekLeadsData(formedWeekLeadsData);
+
+      const leadsDataMonth = await fetchLeads(dateMonth);
+      const formedMonthLeadsData = await monthDataSalesFormer(leadsDataMonth);
+      formedMonthLeadsData.data = monthDate;
+      setMonthLeadsData(formedMonthLeadsData);
+
+
+      setLoading(false);
+    }
+    collector();
   }, []);
 
   return (
    
       <div className={currentMode === 'Dark' ? 'dark' : ''}>
+        {loading  ? (
+          <Loader />
+        ) : (
         <BrowserRouter>
          { loggedIn == true ? (<>
           <div className="flex relative dark:bg-main-dark-bg">
@@ -107,6 +176,7 @@ const App = () => {
           </div>
          </>) :  <LogInForm /> }
         </BrowserRouter>
+        )}
       </div>
   )
 };
