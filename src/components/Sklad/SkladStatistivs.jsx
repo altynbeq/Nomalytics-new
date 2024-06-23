@@ -13,7 +13,7 @@ const SkladStatistivs = () => {
             </div>
             <div className="mt-10 flex flex-col lg:flex-row gap-10 justify-center">
 
-                <div className="border-r-1 border-color m-4 pr-10">
+                <div className="md:border-r-1 border-color m-4 md:pr-10">
                   <div className='flex justify-center flex-col text-center'>
                       <p>
                           <span className="md:text-2xl  font-semibold">210</span>
