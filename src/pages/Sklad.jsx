@@ -12,11 +12,11 @@ const Sklad = () => {
   },[]) 
   return (
     <div className='mt-12  '>
-        <div className="flex flex-col w-[100%] md:flex-row  gap-10 justify-center align-top m-5  lg:flex-row 2xl:flex-row items-center">
+        <div className="flex flex-col w-[90%] md:flex-row  gap-10 justify-center align-top md:m-5  lg:flex-row 2xl:flex-row items-center">
             <SkladStatistivs />
             <SkladStats />
         </div>
-        <div className='w-[108%] flex justify-center align-center mr-5'>
+        <div className='w-[90%] flex justify-center align-center mr-5'>
             <div className="w-[100%] lg:w-[80%] mt-10  bg-white rounded-3xl">
                 <Orders />
             </div>
