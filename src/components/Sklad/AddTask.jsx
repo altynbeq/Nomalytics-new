@@ -6,7 +6,7 @@ import { useStateContext } from '../../contexts/ContextProvider';
 const AddTask = ({taskAddActive, setTaskAddActive}) => {
   const { currentColor, currentMode } = useStateContext();
   return (
-    <div className=" absolute flex mt-5 ml-5 md:ml-5  justify-end   nav-item ">
+    <div className=" absolute flex mt-5 mr-5 md:ml-5  justify-end   nav-item ">
         <div className=" flex-col flex justify-center border-2 rounded-2xl float-right h-full w-full duration-1000 ease-in-out dark:text-gray-700 transition-all dark:bg-[#484B52] bg-white  p-8">
           <div className="flex justify-center">
             <div className='flex justify-center'>
