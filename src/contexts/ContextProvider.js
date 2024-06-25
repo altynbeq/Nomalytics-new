@@ -16,7 +16,7 @@ export const ContextProvider = ({ children }) => {
   const [themeSettings, setThemeSettings] = useState(false);
   const [activeMenu, setActiveMenu] = useState(false);
   const [isClicked, setIsClicked] = useState(initialState);
-  const [ isLoggedIn, setLoggedIn ] = useState(false);
+  const [ isLoggedIn, setLoggedIn ] = useState(true);
 
   const setMode = (e) => {
     setCurrentMode(e.target.value);

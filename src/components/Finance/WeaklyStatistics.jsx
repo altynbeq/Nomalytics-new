@@ -1,11 +1,78 @@
 import React from 'react'
 import { IoIosMore } from 'react-icons/io';
-import { weeklyStats, SparklineAreaData } from '../../data/ecomData';
 import { useStateContext } from '../../contexts/ContextProvider';
-import { SparkLine } from '../../components';
+import { FiStar, FiShoppingCart } from 'react-icons/fi';
+import { BsChatLeft } from 'react-icons/bs';
 
-const WeaklyStatistics = () => {
+const WeaklyStatistics = (weekFinanceData) => {
     const { currentColor, currentMode } = useStateContext();
+    const data = weekFinanceData.weekFinanceData;
+    const bestAvgCheckWorker = { id: null, avgCheck: 0, sales: 0, count: 0 };
+    const avgCheck = 0;
+
+    for (let workerId in data.workersStats) {
+        const { count, sales } = data.workersStats[workerId];
+        const avgCheck = sales / count;
+
+        if (avgCheck > bestAvgCheckWorker.avgCheck) {
+            bestAvgCheckWorker.id = workerId;
+            bestAvgCheckWorker.avgCheck = Math.round(avgCheck);
+            bestAvgCheckWorker.sales = sales;
+            bestAvgCheckWorker.count = count;
+        }
+    }
+
+    const weeklyStats = [
+        {
+            icon: <FiShoppingCart />,
+            amount:  `${Math.round(data.bestSale.OPPORTUNITY) > 0 ? Math.round(data.bestSale.OPPORTUNITY) : 0} тг`,
+            title: 'Топ сделка',
+            desc: `Сотрудник ${data.bestSale.ASSIGNED_BY_ID ? data.bestSale.ASSIGNED_BY_ID : 'Пусто'}`,
+            iconBg: '#FB9678',
+            pcColor: 'green-600',
+        },
+        {
+            icon: <FiStar />,
+            amount: `${data.bestWorker.salesCount} продаж`,
+            title: 'Топ продаж',
+            desc: `Сотрудник ${data.bestWorker.id ? data.bestWorker.id : 'Пусто'}`,
+            iconBg: 'rgb(254, 201, 15)',
+            pcColor: 'green-600',
+        },
+        {
+            icon: <FiStar />,
+            amount: `${data.bestWorker.totalSales} тг`,
+            title: 'Топ прибыль',
+            desc: `Сотрудник ${data.bestWorker.id ? data.bestWorker.id : 'Пусто'}`,
+            iconBg: 'rgb(254, 201, 15)',
+            pcColor: 'green-600',
+        },
+        {
+            icon: <BsChatLeft />,
+            amount: `${data.bestDay.y ? data.bestDay.y : 0} тг`,
+            title: 'Лучший день',
+            desc: `${data.bestDay.x ? data.bestDay.x : 'Пусто'}`,
+            iconBg: '#00C292',
+            pcColor: 'green-600',
+        },
+        {
+            icon: <BsChatLeft />,
+            amount: `${data.bestDay.y ? data.bestDay.y : 0} тг`,
+            title: 'Топ конверсия',
+            desc: `${data.bestDay.x ? data.bestDay.x : 'Пусто'}`,
+            iconBg: '#00C292',
+            pcColor: 'green-600',
+        },
+        {
+            icon: <BsChatLeft />,
+            amount: `${bestAvgCheckWorker.avgCheck ? bestAvgCheckWorker.avgCheck : 0} тг`,
+            title: 'Топ средний чек',
+            desc: `${bestAvgCheckWorker.id ? bestAvgCheckWorker.id : 'Пусто'}`,
+            iconBg: '#00C292',
+            pcColor: 'green-600',
+        },
+    ];
+
     return (
         <div className="bg-white dark:text-gray-200 justify-center align-center text-center dark:bg-secondary-dark-bg p-1 ml-1 w-[90%] md:w-[30%] rounded-2xl">
             <div className="flex flex-wrap justify-center">
@@ -37,9 +104,9 @@ const WeaklyStatistics = () => {
                         <p className={`text-${item.pcColor}`}>{item.amount}</p>
                     </div>
                     ))}
-                    <div className="mt-4">
+                    {/* <div className="mt-4">
                     <SparkLine currentColor={currentColor} id="area-sparkLine" height="160px" type="Area" data={SparklineAreaData}  color="rgb(242, 252, 253)" />
-                    </div>
+                    </div> */}
                 </div>
                 </div>
             </div>

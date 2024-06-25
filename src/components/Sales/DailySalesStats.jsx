@@ -2,12 +2,10 @@ import React from 'react'
 import { GoPrimitiveDot } from 'react-icons/go';
 import { Button, Pie } from '../../components';
 import { revenueTypesData, weakylRevenue, lineCustomSeries, LinePrimaryXAxis, LinePrimaryYAxis }  from '../../data/financeData'
-import { revenueTypesDataSales } from '../../data/salesData';
 import { useStateContext } from '../../contexts/ContextProvider';
 
-const DailySalesStats = () => {
+const DailySalesStats = ({dayFinanceData, dayLeadsData}) => {
     const { currentColor, currentMode } = useStateContext();
- 
   return (
     <div className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg m-3 p-4 w-[90%] md:w-[50%] rounded-2xl ">
             <div className="flex flex-col md:flex-row justify-between">
@@ -18,7 +16,7 @@ const DailySalesStats = () => {
                 <div className="border-r-1 border-color m-4 pr-10">
                   <div className='flex justify-center flex-col text-center'>
                       <p>
-                          <span className="md:text-2xl  font-semibold">210</span>
+                          <span className="md:text-2xl  font-semibold">{dayFinanceData.leadsCount}</span>
                           <span className="p-1.5 hover:drop-shadow-xl cursor-pointer rounded-full text-white bg-green-400 ml-3 text-xs">
                               36% 
                           </span>
@@ -32,19 +30,19 @@ const DailySalesStats = () => {
                     </div>
                     <div className='flex justify-center flex-col text-center'>
                         <p>
-                            <span className="md:text-2xl  font-semibold">140 500</span>
+                            <span className="md:text-2xl  font-semibold">{dayLeadsData.leadsCount}</span>
                             <span className="p-1.5 hover:drop-shadow-xl cursor-pointer rounded-full text-white bg-red-400 ml-3 text-xs">
                                 7%
                             </span>
                         </p>
-                        <p className="text-gray-500 mt-1">Средний чек</p>
+                        <p className="text-gray-500 mt-1">Лидов</p>
                     </div>
                   </div>
                   <div className="mt-8">
                     <div>
                         <div className='flex justify-center flex-col text-center'>
                             <p>
-                                <span className="md:text-2xl font-semibold">1 104 500 тг</span>
+                                <span className="md:text-2xl font-semibold">{dayFinanceData.totalSum}</span>
                                 <span className="p-1.5 hover:drop-shadow-xl cursor-pointer rounded-full text-white bg-red-400 ml-3 text-xs">
                                     7%
                                 </span>
@@ -69,19 +67,19 @@ const DailySalesStats = () => {
                     <div className='flex justify-center text-center flex-col'>
                         <h2>Способы оплат</h2>
                     </div>
-                    <Pie id="pie-money-flow" data={revenueTypesDataSales} legendVisiblity={false} height="250px"  />
+                    <Pie id="pie-money-flow" data={dayLeadsData.leadsSourceSeries} legendVisiblity={false} height="250px" color="red"  />
                     <div className='flex flex-row justify-between'>
                         <p className="flex items-center gap-2 text-cyan-600 hover:drop-shadow-xl">
                          <span>
                          <GoPrimitiveDot />
                          </span>
-                         <span>Online</span>
+                         <span>Intagram</span>
                         </p>
                         <p className="flex items-center gap-2 text-gray-600 hover:drop-shadow-xl">
                          <span>
                          <GoPrimitiveDot />
                          </span>
-                         <span>Offline</span>
+                         <span>WhatsApp</span>
                         </p>
                     </div>
                 </div>

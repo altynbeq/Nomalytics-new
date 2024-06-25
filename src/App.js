@@ -21,7 +21,6 @@ import { monthDataSalesFormer } from './data/Sales/MonthDataSalesFormer';
 
 const App = () => {
   const { isLoggedIn, setCurrentColor, setCurrentMode, currentMode, activeMenu, currentColor, themeSettings, setThemeSettings } = useStateContext();
-  const [ loggedIn, setLoggedIn ] = useState(false);
   const [ hasAccess, setHasAccess ] = useState(false);
   const [ loading, setLoading ] = useState(true);
 
@@ -83,10 +82,9 @@ const App = () => {
       formedMonthLeadsData.data = monthDate;
       setMonthLeadsData(formedMonthLeadsData);
 
-
       setLoading(false);
     }
-      collector();
+    collector();
   }, []);
 
   return (
@@ -140,8 +138,22 @@ const App = () => {
                   {/* dashboard  */}
                   <Route path="/" element={(<General />)} />
                   <Route path="/general" element={(<General />)} />
-                  <Route path="/finance" element={(<Finance />)} />
-                  <Route path="/sales" element={(<Sales />)} />
+                  <Route path="/finance" element={(
+                      <Finance 
+                        weekFinanceData={weekFinanceData} 
+                        dayFinanceData={dayFinanceData} 
+                        monthFinanceData={monthFinanceData} 
+                      />)} 
+                  />
+                  <Route path="/sales" element={(
+                      <Sales 
+                        dayFinanceData={dayFinanceData} 
+                        weekFinanceData={weekFinanceData} 
+                        monthFinanceData={monthFinanceData}
+                        weekLeadsData={weekLeadsData} 
+                        dayLeadsData={dayLeadsData}  
+                      />)} 
+                  />
                   <Route path="/workers" element={(<Workers />)} />
                   <Route path="/sklad" element={(<Sklad />)} />
 
