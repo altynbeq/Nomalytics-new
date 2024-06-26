@@ -146,18 +146,29 @@ export const dealsDataCollector = (list) => {
     dealsStats.minSalesSeries = minSalesInSeries;
     dealsStats.avgCheck = dealsStats.leadsCount > 0 ? Math.round(dealsStats.totalSum / dealsStats.leadsCount) : 0;
 
-    dealsStats.series.forEach(day => {
-        const dayIndex = dealsStats.avgCheckSeries.findIndex(item => item.x === day.x);
-        if (dayIndex !== -1 && dailySalesCount[day.x] > 0) {
-            dealsStats.avgCheckSeries[dayIndex].yval = Math.round(day.y / dailySalesCount[day.x]);
-        }
-    });
-
+    // dealsStats.series.forEach(day => {
+    //     const dayIndex = dealsStats.avgCheckSeries.findIndex(item => item.x === day.x);
+    //     if (dayIndex !== -1 && dailySalesCount[day.x] > 0) {
+    //         dealsStats.avgCheckSeries[dayIndex].yval = Math.round(day.y / dailySalesCount[day.x]);
+    //     }
+    // });
+    
     // Update salesSeries
     dealsStats.salesSeries = dealsStats.salesSeries.map(day => ({
         x: day.x,
         y: dailySalesCount[day.x]
     }));
 
+    dealsStats.avgCheckSeries.forEach(day => {
+        const dayOfWeekIndex = day.x - 1; // Convert x to array index (0 for Monday, 1 for Tuesday, etc.)
+        const totalSumForDay = dealsStats.series[dayOfWeekIndex].y; // Get total sum of money for the day
+        const totalSalesForDay = dealsStats.salesSeries[dayOfWeekIndex].y; // Get total number of sales for the day
+
+        if (totalSalesForDay > 0) {
+            day.yval = Math.round(totalSumForDay / totalSalesForDay); // Calculate average check for the day
+        } else {
+            day.yval = 0; // If no sales, average check is 0
+        }
+    });
     return dealsStats;
 }

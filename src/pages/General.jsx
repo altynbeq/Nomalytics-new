@@ -13,7 +13,7 @@ const General = () => {
 
   return (
     <div className="mt-12">
-      <div className='flex mx-3  mt-5 flex-wrap justify-center gap-[1.5rem] items-center'>
+      <div className='flex md:mx-3  flex-wrap justify-center gap-[1.5rem] items-center'>
         <FirstRowStats />
       </div>
       <div className="flex   gap-4 flex-col md:flex-row  justify-center">

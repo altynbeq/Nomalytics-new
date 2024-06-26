@@ -20,7 +20,6 @@ const MonthStatistics = (monthFinanceData) => {
     //         bestAvgCheckWorker.count = count;
     //     }
     // }
-    console.log(data.bestSale)
     const weeklyStats = [
         {
             icon: <FiShoppingCart />,

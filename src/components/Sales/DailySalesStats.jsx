@@ -63,12 +63,12 @@ const DailySalesStats = ({dayFinanceData, dayLeadsData}) => {
                   </div>
                 </div>
                 
-                <div className="m-auto lg:m-0">
+                <div className="m-auto flex flex-col justify-center align-center lg:m-0">
                     <div className='flex justify-center text-center flex-col'>
                         <h2>Способы оплат</h2>
                     </div>
                     <Pie id="pie-money-flow" data={dayLeadsData.leadsSourceSeries} legendVisiblity={false} height="250px" color="red"  />
-                    <div className='flex flex-row justify-between'>
+                    <div className='flex flex-row gap-2 justify-between'>
                         <p className="flex items-center gap-2 text-cyan-600 hover:drop-shadow-xl">
                          <span>
                          <GoPrimitiveDot />
@@ -80,6 +80,12 @@ const DailySalesStats = ({dayFinanceData, dayLeadsData}) => {
                          <GoPrimitiveDot />
                          </span>
                          <span>WhatsApp</span>
+                        </p>
+                        <p className="flex items-center gap-2 text-blue-600 hover:drop-shadow-xl">
+                         <span>
+                         <GoPrimitiveDot />
+                         </span>
+                         <span>Другое</span>
                         </p>
                     </div>
                 </div>
